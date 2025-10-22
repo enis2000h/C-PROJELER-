@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int G, R, SS, SO; // G: Getiri, R: Risksiz faiz, SS: Standart sapma, SO: Sharpe Oranı
+    float G, R, SS, SO;
 
     printf("Yatirimin getirisini girin (yuzde olarak): ");
-    scanf("%d", &G);
+    scanf("%f", &G);
 
     printf("Risksiz faiz oranini girin (yuzde olarak): ");
-    scanf("%d", &R);
+    scanf("%f", &R);
 
     printf("Portfoyun standart sapmasini girin (yuzde olarak): ");
-    scanf("%d", &SS);
+    scanf("%f", &SS);
 
     SO = (G - R) / SS;
 
-    printf("\nSharpe Orani (SO): %d\n", SO);
+    printf("\nSharpe Orani (SO): %.2f\n", SO);
 
     if (SO < 1)
         printf("Bu oran dusuk kabul edilir.\n");
@@ -27,3 +27,4 @@ int main() {
 
     return 0;
 }
+
